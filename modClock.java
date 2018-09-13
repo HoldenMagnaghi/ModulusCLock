@@ -33,6 +33,10 @@ public class modClock
 	  	finalHour += finalMinutes / 60;
 	  	finalMinutes = finalMinutes % 60;
 
+	  	// Convert zero o'clock to twelve o'clock
+		if (futureHour == 0){
+		  futureHour = 12;
+}
 	  	System.out.println("Futre time = "+finalHour+":"+finalMinutes+" O'Clock");
 
 
