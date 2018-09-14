@@ -11,8 +11,6 @@ public class modClock
 		int startMinutes;
 		int futureHour;
 		int futureMinutes;
-		int totalHour = 12;
-		int totalMinutes = 60;
 		int finalHour;
 		int finalMinutes;
 
@@ -33,11 +31,17 @@ public class modClock
 	  	finalHour += finalMinutes / 60;
 	  	finalMinutes = finalMinutes % 60;
 
+	  	finalHour = finalHour % 12;
+
 	  	// Convert zero o'clock to twelve o'clock
-		if (futureHour == 0){
-		  futureHour = 12;
+		if (finalHour == 0){
+		  finalHour = 12;
 }
-	  	System.out.println("Futre time = "+finalHour+":"+finalMinutes+" O'Clock");
+
+
+
+
+	  	System.out.println("Future time = "+finalHour+":"+finalMinutes+" O'Clock");
 
 
 	}
